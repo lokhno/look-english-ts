@@ -1,0 +1,12 @@
+.my-words {
+    &__list {
+        margin-top: 5px;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .my-words__list {
+        overflow: auto;
+        height: calc(100vh - 150px);
+    }
+}

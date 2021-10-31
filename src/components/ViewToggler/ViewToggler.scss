@@ -1,0 +1,15 @@
+.toggle-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &__open_hidden {
+        display: none;
+    }
+    &__close_hidden {
+        display: none;
+    }
+    div {
+        margin-top: 3px;
+    }
+}

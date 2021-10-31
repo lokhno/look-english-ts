@@ -1,0 +1,22 @@
+.control-menu {
+    display: flex;
+    &__button {
+        margin: 5px;
+        margin-top: 0px;
+        flex: 1 1 auto;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+    .control-menu {
+        &__button {
+            margin: 0px 10px 3px 0px;
+        }
+    }
+}

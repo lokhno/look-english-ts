@@ -1,0 +1,84 @@
+@import "../../../styles/Variables.scss";
+.menu {
+    position: relative;
+    border-top-right-radius: 5px;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    &__opener {
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+    }
+    &__greetings {
+        display: flex;
+        width: 113px;
+        font-size: 20px;
+        align-items: center;
+        margin: 10px;
+    }
+    &__dropdown {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        bottom: -98px;
+        left: -1px;
+        width: calc(100% + 2px);
+    }
+    &__toggler {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #000;
+        &:hover {
+            background-color: $hover-background-color;
+        }
+    }
+    a:last-child {
+        .menu__item {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+    .fa-chevron-up {
+        display: none;
+    }
+    .fa-chevron-down {
+        display: inline-block;
+    }
+    &:hover {
+        border: 1px solid #000;
+        border-bottom-right-radius: 5px;
+    }
+    &_open {
+        border: 1px solid #000;
+        .menu__dropdown {
+            display: block;
+            z-index: 10;
+        }
+        .fa-chevron-up {
+            display: inline-block;
+        }
+        .fa-chevron-down {
+            display: none;
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+    .menu {
+        &__greetings {
+            max-width: none;
+            width: 200px;
+        }
+        &__dropdown {
+            bottom: -82px;
+        }
+    }
+}

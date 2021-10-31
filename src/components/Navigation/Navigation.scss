@@ -1,0 +1,84 @@
+@import "../../styles/Variables.scss";
+.navigation {
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.7);
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    &__item {
+        display: none;
+        background-color: rgb(248, 248, 248);
+        margin-top: 3px;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        &:hover {
+            border-top: 1px solid #000;
+            margin-top: 1px;
+            border-bottom: 1px solid #000;
+        }
+        &_active {
+            color: #fff;
+            background-color: #4a4a4a;
+        }
+    }
+    &__opener {
+        position: absolute;
+        top: -43px;
+        left: 10px;
+        width: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #fff;
+        .fa-bars,
+        .fa-times {
+            font-size: 35px;
+        }
+        .fa-times {
+            display: none;
+        }
+        .fa-bars {
+            display: inline-block;
+        }
+    }
+    &_open {
+        .fa-times {
+            display: inline-block;
+        }
+        .fa-bars {
+            display: none;
+        }
+        .navigation__item {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media all and (min-width: 800px) {
+    .navigation {
+        margin: 10px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 200px;
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.7);
+        &__opener {
+            display: none !important;
+        }
+        &__item {
+            display: flex;
+            border-radius: 0;
+        }
+    }
+}

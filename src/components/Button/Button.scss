@@ -1,0 +1,40 @@
+@import "../../styles/Variables.scss";
+.button {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    &:hover {
+        background-color: $hover-background-color;
+        cursor: pointer;
+    }
+    &__title {
+        display: none;
+    }
+    &__alternative-view {
+        display: block;
+    }
+    &_blocked {
+        background-color: #828282;
+        cursor: not-allowed !important;
+        box-shadow: none !important;
+        background-color: #828282 !important;
+    }
+    &:active {
+        box-shadow: 0px 0px 2px 1px rgba(34, 60, 80, 0.7);
+    }
+}
+
+@media all and (min-width: 800px) {
+    .button {
+        &__title {
+            display: block;
+        }
+        &__alternative-view {
+            display: none;
+        }
+    }
+}

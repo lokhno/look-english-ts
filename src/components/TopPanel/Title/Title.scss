@@ -1,0 +1,19 @@
+.title {
+    &__small {
+        display: block;
+    }
+    &__full {
+        display: none;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .title {
+        &__small {
+            display: none;
+        }
+        &__full {
+            display: block;
+        }
+    }
+}

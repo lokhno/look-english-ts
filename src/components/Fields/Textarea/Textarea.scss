@@ -1,0 +1,9 @@
+.textarea {
+    width: 100%;
+    textarea {
+        width: calc(100% - 14px);
+        padding: 5px;
+        font-size: 18px;
+        height: 80px;
+    }
+}
